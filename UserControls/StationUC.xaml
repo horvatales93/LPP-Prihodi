@@ -1,0 +1,25 @@
+﻿<UserControl
+    x:Class="TrolaInfo.UserControls.StationUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TrolaInfo.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <StackPanel x:Name="StpStation">
+        <StackPanel x:Name="stpRefresh" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Collapsed">
+            <ProgressRing x:Name="progRingRefresh"/>
+            <TextBlock x:Name="progRingRefText" FontSize="10" Text="Refreshing..."/>
+        </StackPanel>
+        <ListView x:Name="lvBuses" Margin="0,5,0,0" Padding="0" SelectionMode="None">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+    </StackPanel>
+</UserControl>
